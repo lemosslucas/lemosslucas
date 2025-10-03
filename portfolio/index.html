@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Lemos Ricaldoni</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+        /* CSS DENTRO DO HTML */
+        /* Importação de Fonte e Variáveis de Cor */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        :root {
+            --primary-color: #00aaff;
+            /* Azul vibrante */
+            --secondary-color: #0e1a2b;
+            /* Azul escuro quase preto */
+            --text-color: #f0f0f0;
+            /* Branco suave */
+            --bg-color: #08101a;
+            --card-bg: #112240;
+        }
+
+        /* Estilos Globais e Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        section {
+            min-height: 100vh;
+            padding: 10rem 9% 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Cabeçalho */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 9%;
+            background: rgba(8, 16, 26, 0.7);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            transition: background 0.3s;
+        }
+
+        .header.scrolled {
+            background: var(--bg-color);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar > a {
+            font-size: 1.1rem;
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
+
+        .navbar > a:hover,
+        .navbar > a.active {
+            color: var(--primary-color);
+        }
+
+        #menu-icon {
+            font-size: 2.2rem;
+            color: var(--text-color);
+            display: none;
+            /* Escondido por padrão em telas maiores */
+        }
+
+        /* Seção Home */
+        .home {
+            flex-direction: column;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .home-content {
+            z-index: 1;
+        }
+
+        .home-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .home-content h3 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+
+        .social-links {
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            border-radius: 50%;
+            font-size: 20px;
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 0 0.5rem;
+            transition: 0.5s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+            color: var(--secondary-color);
+            box-shadow: 0 0 1rem var(--primary-color);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2.8rem;
+            background: var(--primary-color);
+            border-radius: 40px;
+            box-shadow: 0 0 1rem var(--primary-color);
+            font-size: 1rem;
+            color: var(--secondary-color);
+            letter-spacing: 0.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.5s ease;
+        }
+
+        .btn:hover {
+            box-shadow: none;
+        }
+
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        #bg-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.15;
+        }
+
+
+        /* Seção Sobre */
+        .about {
+            background: var(--secondary-color);
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .about-img img {
+            width: 250px;
+            border-radius: 20%;
+            border: 5px solid var(--primary-color);
+            box-shadow: 0 0 2rem var(--primary-color);
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Seção Projetos */
+        .projects {
+            flex-direction: column;
+            justify-content: flex-start; /* Alinha o conteúdo ao topo */
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            margin-bottom: 10rem;
+            text-align: center;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            width: 100%;
+        }
+
+        .project-card {
+            position: relative;
+            border-radius: 1rem;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 170, 255, 0.4);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(14, 26, 43, 0.95), transparent);
+            color: white;
+            padding: 2rem 1.5rem 1.5rem;
+        }
+
+        .card-overlay h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Estilo do Modal (Pop-up) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background-color: var(--card-bg);
+            margin: 5% auto;
+            padding: 2.5rem;
+            border-radius: 1rem;
+            max-width: 700px;
+            position: relative;
+            color: var(--text-color);
+        }
+
+        .close-btn {
+            color: #aaa;
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            color: var(--primary-color);
+        }
+
+        .modal-img {
+            width: 100%;
+            height: 300px; /* Altura fixa para padronizar */
+            object-fit: contain; /* Garante que a imagem apareça inteira sem distorcer */
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-content h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .project-tags {
+            margin-bottom: 1rem;
+        }
+
+        .project-tags span {
+            background: rgba(0, 170, 255, 0.1);
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 1rem;
+            font-size: 0.9rem;
+            margin-right: 0.5rem;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+
+        /* Seção Habilidades */
+        .skills {
+            background: var(--secondary-color);
+            flex-direction: column;
+            justify-content: flex-start; /* Alinha o conteúdo ao topo */
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .skill-item {
+            background: var(--card-bg);
+            color: var(--text-color);
+            padding: 1.5rem 2rem;
+            border-radius: 0.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+            background: var(--primary-color);
+            color: var(--secondary-color);
+        }
+
+        .skill-item i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            transition: color 0.3s;
+        }
+
+        .skill-item:hover i {
+            color: var(--secondary-color);
+        }
+
+        /* Seção Contato */
+        .contact {
+            flex-direction: column;
+            text-align: center;
+            justify-content: flex-start; /* Alinha o conteúdo ao topo */
+        }
+
+        .contact-content {
+            max-width: 700px;
+        }
+
+        .contact h2 {
+            font-size: 2.8rem;
+            margin-bottom: 5rem;
+        }
+
+        .contact p {
+            margin-bottom: 2rem;
+        }
+
+        /* Seletor de Idiomas */
+        .language-selector {
+            position: relative;
+            margin-left: 2rem;
+        }
+
+        .language-button {
+            background: none;
+            border: none;
+            color: var(--text-color);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s;
+            padding: 0;
+        }
+
+        .language-button:hover {
+            color: var(--primary-color);
+        }
+
+        .language-button .fa-chevron-down {
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .language-dropdown {
+            display: none;
+            position: absolute;
+            top: calc(100% + 10px);
+            right: 0;
+            background-color: var(--card-bg);
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            z-index: 110;
+            min-width: 170px; 
+        }
+
+        .language-dropdown a {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .language-dropdown a:hover {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+
+        /* Rodapé */
+        .footer {
+            padding: 1.5rem 9%;
+            text-align: center;
+            background: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade */
+        /* Animações do seletor de idiomas */
+        .language-selector.open .language-dropdown {
+            display: block;
+        }
+
+        .language-selector.open .language-button .fa-chevron-down {
+            transform: rotate(180deg);
+        }
+
+        @media (max-width: 992px) {
+            .header {
+                padding: 1.5rem 4%;
+            }
+
+            section {
+                padding: 8rem 4% 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #menu-icon {
+                display: block;
+                /* Mostra o ícone do hamburguer */
+            }
+
+            .navbar {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                padding: 1rem 4%;
+                background: var(--bg-color);
+                display: none;
+                /* Escondido por padrão */
+
+            }
+
+            .navbar.active {
+                display: block;
+                /* Mostra o menu quando ativo */
+            }
+
+            .navbar a {
+                display: block;
+                font-size: 1.2rem;
+                margin: 1.5rem 0;
+            }
+
+            .home-content h1 {
+                font-size: 2.8rem;
+            }
+
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-img img {
+                width: 250px;
+                margin-bottom: 2rem;
+            }
+
+            /* Ajustes no seletor de idiomas para mobile */
+            .language-selector {
+                margin: 1.5rem 0;
+            }
+            .language-button {
+                font-size: 1.2rem;
+                width: 100%;
+                justify-content: flex-start;
+            }
+            .language-dropdown {
+                right: auto; /* Remove o alinhamento à direita do desktop */
+                left: 0;     /* Alinha à esquerda do botão */
+                min-width: 100%; /* Ocupa a largura total do botão */
+            }
+
+            .modal-content {
+                margin: 15% auto;
+                padding: 1.5rem;
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            html {
+                font-size: 90%;
+            }
+
+            .home-content h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="#home" class="logo">Lucas Lemos Ricaldoni</a>
+
+        <i class="fas fa-bars" id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about" data-pt="Sobre" data-en="About" data-it="Su">Sobre</a>
+            <a href="#projects" data-pt="Projetos" data-en="Projects" data-it="Progetti">Projetos</a>
+            <a href="#skills"data-pt="Habilidades" data-en="Skills" data-it="Competenze">Habilidades</a>
+            <a href="#contact" data-pt="Contato" data-en="Contact" data-it="Contatti">Contato</a>
+
+            <!-- Seletor de Idiomas -->
+            <div class="language-selector">
+                <button class="language-button" aria-label="Selecionar Idioma" type="button">
+                    <i class="fas fa-globe"></i>
+                    <span id="current-lang">🇧🇷</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="language-dropdown">
+                    <a href="#" data-lang="pt" data-emoji="🇧🇷">🇧🇷 Português</a>
+                    <a href="#" data-lang="en">🇬🇧 English</a>
+                    <a href="#" data-lang="it">🇮🇹 Italiano</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="home">
+        <div class="home-content" data-aos="fade-up">
+            <h1 data-pt="Tecnico de Robótica &<br>Visão Computacional" 
+                data-en="Robotics Technician &<br>Computer Vision" 
+                data-it="Tecnico di Robotica &<br>Visione Artificiale">
+                Tecnico de Robótica &<br>Visão Computacional
+            </h1>
+            <h3 data-pt="Construindo a percepção do futuro." 
+                data-en="Building the perception of the future." 
+                data-it="Costruendo la percezione del futuro.">
+                Construindo a percepção do futuro.
+            </h3>
+            <a href="#projects" class="btn" data-pt="Veja meus projetos" data-en="See my projects" data-it="Guarda i miei progetti">Veja meus projetos</a>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/lucaslemosricaldoni/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/lemosslucas" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://app.readytensor.ai/users/lucaslemosricaldoni" target="_blank" aria-label="Ready Tensor"><i class="fa-solid fa-robot"></i></a>
+                <a href="https://grabcad.com/lucas.lemos.ricaldoni-1" target="_blank" aria-label="GrabCAD"><i class="fas fa-cube"></i> </a>
+            </div>
+        </div>
+        <div class="video-background">
+            <video autoplay muted loop id="bg-video" playsinline>
+                <source src="img/car.mp4" type="video/mp4">
+                <span data-pt="Seu navegador não suporta vídeos em HTML5." data-en="Your browser does not support HTML5 video." data-it="Il tuo browser non supporta i video HTML5.">Seu navegador não suporta vídeos em HTML5.</span>
+            </video>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-container" data-aos="fade-up">
+            <div class="about-img">
+                <img src="img/foto_de_perfil.png" alt="Foto de Lucas Lemos Ricaldoni">
+            </div>
+            <div class="about-text">
+                <h2 data-pt="Sobre Mim" data-en="About Me" data-it="Su di me">Sobre Mim</h2>
+                <p data-pt="Fascinado pela capacidade das máquinas de perceber e interagir com o mundo. Meu objetivo é desenvolver sistemas robóticos inteligentes que solucionem problemas complexos do mundo real." data-en="Fascinated by the ability of machines to perceive and interact with the world. My goal is to develop intelligent robotic systems that solve complex real-world problems." data-it="Affascinato dalla capacità delle macchine di percepire e interagire con il mondo. Il mio obiettivo è sviluppare sistemi robotici intelligenti che risolvano complessi problemi del mondo reale.">
+                    Fascinado pela capacidade das máquinas de perceber e interagir com o mundo. Meu objetivo é desenvolver sistemas robóticos inteligentes que solucionem problemas complexos do mundo real.
+                </p>
+                <p data-pt="Com foco no desenvolvimento de algoritmos de visão computacional para navegação autônoma e manipulação de objetos, tenho experiência com OpenCV, modelagem de robos usando softwares como SolidWorks, Fusion 360 e desenvolvimento de circuitos eletronicos." data-en="With a focus on developing computer vision algorithms for autonomous navigation and object manipulation, I have experience with OpenCV, robot modeling using software like SolidWorks, Fusion 360, and electronic circuit development." data-it="Con un focus sullo sviluppo di algoritmi di visione artificiale per la navigazione autonoma e la manipolazione di oggetti, ho esperienza con OpenCV, modellazione di robot con software come SolidWorks, Fusion 360 e sviluppo di circuiti elettronici.">
+                    Com foco no desenvolvimento de algoritmos de visão computacional para navegação autônoma e manipulação de objetos, tenho experiência com OpenCV, modelagem de robos usando softwares como SolidWorks, Fusion 360 e desenvolvimento de circuitos eletronicos.
+                </p>
+                <a href="Lucas_Lemos_Ricaldoni_CV.pdf" class="btn" target="_blank" download data-pt="Download CV" data-en="Download CV" data-it="Scarica CV">Download CV</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2 class="section-title" data-aos="fade-up" data-pt="Projetos" data-en="Projects" data-it="Progetti">Projetos</h2>
+        <div class="projects-grid" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-card" onclick="openModal('modal1')">
+                <img src="img/Cora2025_blue.PNG" alt="CoRA2025">
+                <div class="card-overlay">
+                    <h3 data-pt="CoRA2025" data-en="CoRA2025" data-it="CoRA2025">CoRA2025</h3>
+                    <p data-pt="Competição de Robos Autonomos da UFMG" data-en="UFMG Autonomous Robots Competition" data-it="Competizione di Robot Autonomi dell'UFMG">Competição de Robos Autonomos da UFMG</p>
+                </div>
+            </div>
+            <div class="project-card" onclick="openModal('modal2')">
+                <img src="img/bms_box.PNG" alt="Modelagem 3D">
+                <div class="card-overlay">
+                    <h3 data-pt="Modelagem 3D" data-en="3D Modeling" data-it="Modellazione 3D">Modelagem 3D</h3>
+                    <p data-pt="Projetos desenvolvidos com SolidWorks/Fusion360" data-en="Projects developed with SolidWorks/Fusion360" data-it="Progetti sviluppati con SolidWorks/Fusion360">Projetos desenvolvidos com SolidWorks/Fusion360</p>
+                </div>
+            </div>
+            <div class="project-card" onclick="openModal('modal3')">
+                <img src="img/OBR2025_car.PNG" alt="OBR 2025">
+                <div class="card-overlay">
+                    <h3 data-pt="Braço Robótico com IA" data-en="Robotic Arm with AI" data-it="Braccio Robotico con IA">Braço Robótico com IA</h3>
+                    <p data-pt="Olimpiada Brasileira de Robotica." data-en="Brazilian Robotics Olympiad." data-it="Olimpiadi Brasiliane di Robotica.">Olimpiada Brasileira de Robotica.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="modal1" class="modal">
+        <div class="modal-content" data-aos="zoom-in">
+            <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
+            <img src="img/Cora2025.jpg" alt="Projeto 3" class="modal-img">
+                <h2 data-pt="Competição de Robôs Autônomos da UFMG" data-en="UFMG Autonomous Robots Competition" data-it="Competizione di Robot Autonomi dell'UFMG">Competição de Robôs Autônomos da UFMG</h2>
+
+                <div class="project-tags">
+                    <span>C/C++</span><span>Python</span><span>Fusion360</span><span>SolidWorks</span><span>Arduino</span>
+                </div>
+
+                <p data-pt="Robô seguidor de linha avançado, com projeto mecânico, eletrônico e firmware integrados. Fui capitão da equipe, liderei o desenvolvimento do software e garanti a integração de todos os subsistemas." data-en="Advanced line-following robot, with integrated mechanical, electronic, and firmware design. I was the team captain, led the software development, and ensured the integration of all subsystems." data-it="Robot segui-linea avanzato, con progettazione meccanica, elettronica e firmware integrati. Sono stato il capitano della squadra, ho guidato lo sviluppo del software e garantito l'integrazione di tutti i sottosistemi.">Robô seguidor de linha avançado, com projeto mecânico, eletrônico e firmware integrados. Fui capitão da equipe, liderei o desenvolvimento do software e garanti a integração de todos os subsistemas.</p>
+
+                <p data-pt="<strong>Resultado:</strong> 3º lugar (Seguidor de Linha Avançado) e 1º lugar (Design)." data-en="<strong>Result:</strong> 3rd place (Advanced Line Follower) and 1st place (Design)." data-it="<strong>Risultato:</strong> 3º posto (Segui-linea Avanzato) e 1º posto (Design)."><strong>Resultado:</strong> 3º lugar (Seguidor de Linha Avançado) e 1º lugar (Design).</p>
+
+                <p style="text-align:center; margin-top:1rem;">
+                    <a href="https://github.com/lemosslucas/CoRA2025" class="btn" target="_blank" rel="noopener noreferrer" data-pt="Ver no GitHub" data-en="View on GitHub" data-it="Vedi su GitHub">
+                    <i class="fab fa-github"></i> <span data-pt="Ver no GitHub" data-en="View on GitHub" data-it="Vedi su GitHub">Ver no GitHub</span>
+                    </a>
+                </p>
+            </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-content" data-aos="zoom-in">
+        <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
+        <img src="img/bms_box.PNG" alt="Projeto 2" class="modal-img">
+        <h2 data-pt="Modelagem 3D" data-en="3D Modeling" data-it="Modellazione 3D">Modelagem 3D</h2>
+
+        <div class="project-tags">
+            <span>SolidWorks</span><span>Fusion360</span><span>CAD</span>
+        </div>
+
+        <p data-pt="Modelagem 3D para prototipagem mecânica, eletrônica e robótica usando SolidWorks e Fusion 360." data-en="3D modeling for mechanical, electronic, and robotic prototyping using SolidWorks and Fusion 360." data-it="Modellazione 3D per la prototipazione meccanica, elettronica e robotica utilizzando SolidWorks e Fusion 360.">Modelagem 3D para prototipagem mecânica, eletrônica e robótica usando SolidWorks e Fusion 360.</p>
+
+        <p style="text-align:center; margin-top:1rem;">
+            <a href="https://grabcad.com/lucas.lemos.ricaldoni-1" class="btn" target="_blank" rel="noopener noreferrer" data-pt="Ver no GrabCAD" data-en="View on GrabCAD" data-it="Vedi su GrabCAD">
+            <i class="fas fa-cube"></i> <span data-pt="Ver no GrabCAD" data-en="View on GrabCAD" data-it="Vedi su GrabCAD">Ver no GrabCAD</span>
+            </a>
+        </p>
+    </div>
+
+    </div>
+    <div id="modal3" class="modal">
+        <div class="modal-content" data-aos="zoom-in">
+            <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
+            <img src="img/OBR2025_car.PNG" alt="Projeto 1" class="modal-img">
+            <h2 data-pt="Braço Robótico com IA" data-en="Robotic Arm with AI" data-it="Braccio Robotico con IA">Braço Robótico com IA</h2>
+
+            <div class="project-tags">
+                <span>Python</span><span>OpenCV</span><span>Raspberry Pi</span>
+            </div>
+
+            <p data-pt="<strong>Desafio:</strong> Desenvolver um seguidor de linha capaz de detectar linhas com diferentes cores e executar a identificação, localização e manipulação de objetos específicos em um ambiente." data-en="<strong>Challenge:</strong> To develop a line follower capable of detecting lines of different colors and performing the identification, location, and manipulation of specific objects in an environment." data-it="<strong>Sfida:</strong> Sviluppare un robot segui-linea in grado di rilevare linee di colori diversi ed eseguire l'identificazione, la localizzazione e la manipolazione di oggetti specifici in un ambiente."><strong>Desafio:</strong> Desenvolver um seguidor de linha capaz de detectar linhas com diferentes cores e executar a identificação, localização e manipulação de objetos específicos em um ambiente.</p>
+
+            <p data-pt="<strong>Solução:</strong> Sistema integrado com Raspberry Pi e Python, utilizando OpenCV para visão computacional, lógica de controle para seguir linhas e algoritmos para detecção de objetos." data-en="<strong>Solution:</strong> An integrated system with Raspberry Pi and Python, using OpenCV for computer vision, control logic for line following, and algorithms for object detection." data-it="<strong>Soluzione:</strong> Un sistema integrato con Raspberry Pi e Python, che utilizza OpenCV per la visione artificiale, logica di controllo per seguire le linee e algoritmi per il rilevamento di oggetti."><strong>Solução:</strong> Sistema integrado com Raspberry Pi e Python, utilizando OpenCV para visão computacional, lógica de controle para seguir linhas e algoritmos para detecção de objetos.</p>
+
+            <p style="text-align:center; margin-top:1rem;">
+                <a href="https://github.com/lemosslucas/OBR2025" class="btn" target="_blank" rel="noopener noreferrer" data-pt="Ver no GitHub" data-en="View on GitHub" data-it="Vedi su GitHub">
+                    <i class="fab fa-github"></i> <span data-pt="Ver no GitHub" data-en="View on GitHub" data-it="Vedi su GitHub">Ver no GitHub</span>
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <section id="skills" class="skills">
+        <h2 class="section-title" data-aos="fade-up" data-pt="Habilidades Técnicas" data-en="Technical Skills" data-it="Competenze Tecniche">Habilidades Técnicas</h2>
+            <div class="skills-grid" data-aos="fade-up" data-aos-delay="200">
+                <div class="skill-item" data-pt="Python" data-en="Python" data-it="Python"><i class="fab fa-python"></i> Python</div>
+                <div class="skill-item" data-pt="C/C++" data-en="C/C++" data-it="C/C++"><i class="fas fa-file-code"></i> C/C++</div>
+                
+                <div class="skill-item" data-pt="SolidWorks" data-en="SolidWorks" data-it="SolidWorks"><i class="fas fa-drafting-compass"></i> SolidWorks</div>
+                <div class="skill-item" data-pt="Fusion 360" data-en="Fusion 360" data-it="Fusion 360"><i class="fas fa-ruler-combined"></i> Fusion 360</div>
+
+                <div class="skill-item" data-pt="MATLAB" data-en="MATLAB" data-it="MATLAB"><i class="fas fa-chart-line"></i> MATLAB</div>
+                <div class="skill-item" data-pt="OpenCV" data-en="OpenCV" data-it="OpenCV"><i class="fas fa-eye"></i> OpenCV</div>
+                
+                <div class="skill-item" data-pt="PLC" data-en="PLC" data-it="PLC"><i class="fas fa-microchip"></i> PLC</div>
+
+                <div class="skill-item" data-pt="ROS" data-en="ROS" data-it="ROS"><i class="fas fa-robot"></i> ROS</div>
+                <div class="skill-item" data-pt="Gazebo" data-en="Gazebo" data-it="Gazebo"><i class="fas fa-cubes"></i> Gazebo</div>
+                
+                <div class="skill-item" data-pt="TensorFlow" data-en="TensorFlow" data-it="TensorFlow"><i class="fas fa-brain"></i> TensorFlow</div>
+                <div class="skill-item" data-pt="PyTorch" data-en="PyTorch" data-it="PyTorch"><i class="fas fa-fire"></i> PyTorch</div>
+
+                <div class="skill-item" data-pt="Git" data-en="Git" data-it="Git"><i class="fas fa-code-branch"></i> Git</div>
+            </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-content" data-aos="fade-up">
+            <h2 data-pt="Vamos Conversar?" data-en="Let's Talk?" data-it="Parliamone?">Vamos Conversar?</h2>
+            <p data-pt="Estou sempre aberto a novas oportunidades, desafios e colaborações. Sinta-se à vontade para entrar em contato através do meu e-mail ou LinkedIn." data-en="I am always open to new opportunities, challenges, and collaborations. Feel free to contact me via email or LinkedIn." data-it="Sono sempre aperto a nuove opportunità, sfide e collaborazioni. Non esitate a contattarmi tramite la mia email o LinkedIn.">Estou sempre aberto a novas oportunidades, desafios e colaborações. Sinta-se à vontade para entrar em contato através do meu e-mail ou LinkedIn.</p>
+            <a href="mailto:lucaslemosricaldoni@gmail.com" class="btn" data-pt="Enviar E-mail" data-en="Send Email" data-it="Invia Email">Enviar E-mail</a>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/lucaslemosricaldoni" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/lemosslucas" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p data-pt="&copy; 2025 Lucas Lemos Ricaldoni. Todos os direitos reservados." data-en="&copy; 2025 Lucas Lemos Ricaldoni. All rights reserved." data-it="&copy; 2025 Lucas Lemos Ricaldoni. Tutti i diritti riservati.">&copy; 2025 Lucas Lemos Ricaldoni. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+        // JAVASCRIPT DENTRO DO HTML 
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // Animação da biblioteca AOS 
+            AOS.init({
+                duration: 1000, // Duração da animação 
+                once: true, // Animação acontece apenas uma vez 
+            });
+
+            // Efeito de sombra no cabeçalho ao rolar 
+            const header = document.querySelector('.header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // Menu hamburguer para telas pequenas 
+            const menuIcon = document.querySelector('#menu-icon');
+            const navbar = document.querySelector('.navbar');
+
+            menuIcon.onclick = () => {
+                navbar.classList.toggle('active');
+            };
+
+            // Fecha o menu ao clicar em um link (para navegação em página única) 
+            const navLinks = document.querySelectorAll('.navbar > a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navbar.classList.contains('active')) {
+                        navbar.classList.remove('active');
+                    }
+                });
+            });
+
+            // Lógica para o menu de idiomas
+            const langSelector = document.querySelector('.language-selector');
+            if (langSelector) {
+                const langButton = langSelector.querySelector('.language-button');
+                const currentLangSpan = langSelector.querySelector('#current-lang');
+                const langDropdownLinks = langSelector.querySelectorAll('.language-dropdown a');
+
+                // Evento para abrir/fechar o menu
+                langButton.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    langSelector.classList.toggle('open');
+                });
+
+                // Evento para cada opção de idioma - AGORA COM TRADUÇÃO
+                langDropdownLinks.forEach(link => {
+                    link.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        const newLang = link.getAttribute('data-lang');
+                        const newEmoji = link.textContent.split(' ')[0]; // Pega o emoji do texto do link
+
+                        // Atualiza o botão com o novo emoji
+                        if (currentLangSpan) {
+                            currentLangSpan.textContent = newEmoji;
+                        }
+
+                        // Chama a função de tradução
+                        translatePage(newLang);
+
+                        // Fecha o menu após a seleção
+                        langSelector.classList.remove('open');
+                    });
+                });
+            }
+
+        });
+
+        // Função para traduzir a página
+        function translatePage(lang) {
+            const elements = document.querySelectorAll('[data-' + lang + ']');
+            elements.forEach(el => {
+                const translation = el.getAttribute('data-' + lang);
+                // Verifica se o elemento é um botão com um ícone para não sobrescrever o ícone
+                if (el.classList.contains('btn') && el.querySelector('i')) {
+                    const textSpan = el.querySelector('span');
+                    if (textSpan) textSpan.innerHTML = translation;
+                } else {
+                    el.innerHTML = translation;
+                }
+            });
+            console.log(`Página traduzida para: ${lang}`);
+        }
+
+        // Funções para abrir e fechar o Modal 
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'block';
+                // Para a animação de entrada do AOS funcionar toda vez que o modal é aberto 
+                const modalContent = modal.querySelector('.modal-content');
+                if (modalContent.hasAttribute('data-aos')) {
+                    modalContent.classList.remove('aos-animate');
+                    setTimeout(() => {
+                        modalContent.classList.add('aos-animate');
+                    }, 10);
+                }
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Fechar o modal se o usuário clicar fora do conteúdo 
+        window.onclick = function (event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            });
+
+            // Fechar o dropdown de idioma se o usuário clicar fora
+            const langSelector = document.querySelector('.language-selector');
+            if (langSelector && !langSelector.contains(event.target)) {
+                langSelector.classList.remove('open');
+            }
+        }
+    </script>
+</body>
+
+</html>
