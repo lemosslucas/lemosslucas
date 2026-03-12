@@ -227,7 +227,7 @@
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             width: 100%;
         }
@@ -248,7 +248,7 @@
 
         .project-card img {
             width: 100%;
-            height: 100%;
+            height: 250px;
             object-fit: cover;
             transition: transform 0.4s ease;
         }
@@ -542,6 +542,10 @@
                 min-width: 100%; /* Ocupa a largura total do botão */
             }
 
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
             .modal-content {
                 margin: 15% auto;
                 padding: 1.5rem;
@@ -670,6 +674,27 @@
                     <p data-pt="Olimpiada Brasileira de Robotica." data-en="Brazilian Robotics Olympiad." data-it="Olimpiadi Brasiliane di Robotica.">Olimpiada Brasileira de Robotica.</p>
                 </div>
             </div>
+            <div class="project-card" onclick="openModal('modal4')">
+                <img src="img/iot.png" alt="Soluções IoT">
+                <div class="card-overlay">
+                    <h3 data-pt="Soluções IoT" data-en="IoT Solutions" data-it="Soluzioni IoT">HidroBots</h3>
+                    <p data-pt="Conectividade e Monitoramento" data-en="Connectivity and Monitoring" data-it="Connettività e Monitoraggio">Sistema IOT voltado ao publico idoso</p>
+                </div>
+            </div>
+            <div class="project-card" onclick="openModal('modal5')">
+                <img src="img/logo.png" alt="Mecatrônica">
+                <div class="card-overlay">
+                    <h3 data-pt="Mecatrônica" data-en="Mechatronics" data-it="Meccatronica">Impressao 3D</h3>
+                    <p data-pt="Sistemas Integrados" data-en="Integrated Systems" data-it="Sistemi Integrati">Loja de Impressao 3D</p>
+                </div>
+            </div>
+            <div class="project-card" onclick="openModal('modal6')">
+                <img src="img/prototipagem.png" alt="CI-IA Saude UFMG Unimed BH">
+                <div class="card-overlay">
+                    <h3 data-pt="CI-IA Saude UFMG Unimed BH" data-en="Prototyping & Innovation" data-it="Prototipazione e Innovazione">CI-IA Saude UFMG Unimed BH</h3>
+                    <p data-pt="Do Conceito à Realidade" data-en="From Concept to Reality" data-it="Dal Concetto alla Realtà">Desafio de Inovação na Triagem Hospitalar</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -731,6 +756,54 @@
             <p style="text-align:center; margin-top:1rem;">
                 <a href="https://github.com/lemosslucas/OBR2025" class="btn" target="_blank" rel="noopener noreferrer" data-pt="Ver no GitHub" data-en="View on GitHub" data-it="Vedi su GitHub">
                     <i class="fab fa-github"></i> <span data-pt="Ver no GitHub" data-en="View on GitHub" data-it="Vedi su GitHub">Ver no GitHub</span>
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <div id="modal4" class="modal">
+        <div class="modal-content" data-aos="zoom-in">
+            <span class="close-btn" onclick="closeModal('modal4')">&times;</span>
+            <img src="img/iot.png" alt="HidroBots" class="modal-img">
+            <h2 data-pt="HidroBots" data-en="HidroBots" data-it="HidroBots">HidroBots</h2>
+
+            <div class="project-tags">
+                <span>ESP32</span><span>MQTT</span><span>Wearable</span><span>IoT</span>
+            </div>
+
+            <p data-pt="Solução IoT integrada que conecta um sensor de umidade (Gnomo) a um smartwatch exclusivo. O sistema notifica proativamente o idoso quando a planta precisa de água, promovendo autonomia. Desenvolvimento 100% autoral e projeto destaque na Semana do Conhecimento da UFMG." data-en="Integrated IoT solution connecting a playful humidity sensor (Gnome) to a custom smartwatch. The system proactively notifies the elderly when the plant needs water, promoting autonomy. 100% original development and highlight project at UFMG Knowledge Week." data-it="Soluzione IoT integrata che collega un sensore di umidità ludico (Gnomo) a uno smartwatch esclusivo. Il sistema notifica proattivamente l'anziano quando la pianta ha bisogno di acqua, promuovendo l'autonomia. Sviluppo 100% originale e progetto di spicco alla Settimana della Conoscenza dell'UFMG.">Solução IoT integrada que conecta um sensor de umidade lúdico (Gnomo) a um smartwatch exclusivo. O sistema notifica proativamente o idoso quando a planta precisa de água, promovendo autonomia. Desenvolvimento 100% autoral e projeto destaque na Semana do Conhecimento da UFMG.</p>
+        </div>
+    </div>
+
+    <div id="modal5" class="modal">
+        <div class="modal-content" data-aos="zoom-in">
+            <span class="close-btn" onclick="closeModal('modal5')">&times;</span>
+            <img src="img/mecatronica.jpg" alt="Mecatrônica" class="modal-img">
+            <h2 data-pt="Mecatrônica" data-en="Mechatronics" data-it="Meccatronica">Mecatrônica</h2>
+
+            <div class="project-tags">
+                <span>Eletrônica</span><span>Mecânica</span><span>Controle</span><span>Atuadores</span>
+            </div>
+
+            <p data-pt="Projetos que unem mecânica, eletrônica e computação para criar máquinas inteligentes. Foco em automação industrial, controle de movimento e integração de hardware e software para otimização de processos." data-en="Projects that combine mechanics, electronics, and computing to create intelligent machines. Focus on industrial automation, motion control, and hardware-software integration for process optimization." data-it="Progetti che uniscono meccanica, elettronica e informatica per creare macchine intelligenti. Focus sull'automazione industriale, controllo del movimento e integrazione hardware-software per l'ottimizzazione dei processi.">Projetos que unem mecânica, eletrônica e computação para criar máquinas inteligentes. Foco em automação industrial, controle de movimento e integração de hardware e software para otimização de processos.</p>
+        </div>
+    </div>
+
+    <div id="modal6" class="modal">
+        <div class="modal-content" data-aos="zoom-in">
+            <span class="close-btn" onclick="closeModal('modal6')">&times;</span>
+            <img src="img/prototipagem.png" alt="CI-IA Saude UFMG Unimed BH" class="modal-img">
+            <h2 data-pt="CI-IA Saude UFMG Unimed BH" data-en="CI-IA Saude UFMG Unimed BH" data-it="CI-IA Saude UFMG Unimed BH">CI-IA Saude UFMG Unimed BH</h2>
+
+            <div class="project-tags">
+                <span>Impressão 3D</span><span>Design Thinking</span><span>MVP</span><span>Inovação</span>
+            </div>
+
+            <p data-pt="1º Lugar no desafio, desenvolvendo uma solução integrada com IA para otimizar a triagem hospitalar." data-en="1st Place in the challenge, developing an integrated AI solution to optimize hospital triage." data-it="1º Posto nella sfida, sviluppando una soluzione integrata con IA per ottimizzare il triage ospedaliero.">1º Lugar no desafio, desenvolvendo uma solução integrada com IA para otimizar a triagem hospitalar.</p>
+
+            <p style="text-align:center; margin-top:1rem;">
+                <a href="https://youtu.be/Z2lGSrR--lI" class="btn" target="_blank" rel="noopener noreferrer" data-pt="Ver Vídeo" data-en="Watch Video" data-it="Guarda Video">
+                    <i class="fab fa-youtube"></i> <span data-pt="Ver Vídeo" data-en="Watch Video" data-it="Guarda Video">Ver Vídeo</span>
                 </a>
             </p>
         </div>
