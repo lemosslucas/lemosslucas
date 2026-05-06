@@ -2,7 +2,7 @@
 
 ###
 
-<p align="left">My name is Lucas Lemos, and I'm a Technical Industrial Automation student from Brazil.</p>
+<p align="left">My name is Lucas Lemos, and I'm a Technical Industrial Automation from Brazil.</p>
 
 ###
 
@@ -10,7 +10,7 @@
 
 ###
 
-<p align="left">📚 Currently exploring the applications of Machine Learning on microcontrollers.<br>🌍 Fluent in Portuguese and Italian.<br>🤖 Passionate about robotics and machine learning.<br>🎯 Improving my English to impact the world with innovative solutions using machine learning.</p>
+<p align="left">📚 Currently exploring the applications of Machine Learning on microcontrollers.<br>🌍 Fluent in Portuguese and Italian.<br>🤖 Passionate about robotics and machine learning.<br>🎯 Improving my English to impact the world with innovative solutions using robotics.</p>
 
 ###
 
