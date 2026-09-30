@@ -1,8 +1,8 @@
-<h2 align="left">Hi 👋! My name is Lucas Lemos</h2>
+<h2 align="left">Hi 👋! My name is Lucas Lemos Ricaldoni</h2>
 
 ###
 
-<p align="left">My name is Lucas Lemos, and I'm a Technical Industrial Automation from Brazil.</p>
+<p align="left">I am a Computer Engineering student at Politecnico di Milano (Italy) and an Industrial Automation Technician from COLTEC/UFMG (Brazil). Founder & Developer at Vitrur.</p>
 
 ###
 
@@ -10,7 +10,7 @@
 
 ###
 
-<p align="left">📚 Currently exploring the applications of Machine Learning on microcontrollers.<br>🌍 Fluent in Portuguese and Italian.<br>🤖 Passionate about robotics and machine learning.<br>🎯 Improving my English to impact the world with innovative solutions using robotics.</p>
+<p align="left">🎓 Computer Engineering @ Politecnico di Milano | Automation Technician @ COLTEC/UFMG.<br>🚀 Founder & IoT/Prototyping Developer @ Vitrur.<br>🏆 1st Place CI-IA Health Challenge (Unimed-BH) | UFMG Academic Relevance Award | 1st Place Best Design CoRA 2025.<br>🌍 Italian & Brazilian citizenship | Portuguese (Native), Italian (B2), English (B1/B2).<br>🤖 Passionate about robotics, IoT, TinyML, computer vision, and rapid prototyping.</p>
 
 ###
 

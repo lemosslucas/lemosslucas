@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucas Lemos Ricaldoni</title>
+    <title>Lucas Lemos Ricaldoni | Portfolio</title>
+    <meta name="description"
+        content="Portfolio de Lucas Lemos Ricaldoni - Estudante de Engenharia de Computação no Politecnico di Milano, Técnico em Automação Industrial (COLTEC/UFMG), especialista em Robótica, IoT, Sistemas Embarcados e Modelagem CAD.">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -79,7 +81,7 @@
             align-items: center;
         }
 
-        .navbar > a {
+        .navbar>a {
             font-size: 1.1rem;
             color: var(--text-color);
             text-decoration: none;
@@ -87,8 +89,8 @@
             transition: color 0.3s;
         }
 
-        .navbar > a:hover,
-        .navbar > a.active {
+        .navbar>a:hover,
+        .navbar>a.active {
             color: var(--primary-color);
         }
 
@@ -216,7 +218,8 @@
         /* Seção Projetos */
         .projects {
             flex-direction: column;
-            justify-content: flex-start; /* Alinha o conteúdo ao topo */
+            justify-content: flex-start;
+            /* Alinha o conteúdo ao topo */
         }
 
         .section-title {
@@ -311,8 +314,10 @@
 
         .modal-img {
             width: 100%;
-            height: 300px; /* Altura fixa para padronizar */
-            object-fit: contain; /* Garante que a imagem apareça inteira sem distorcer */
+            height: 300px;
+            /* Altura fixa para padronizar */
+            object-fit: contain;
+            /* Garante que a imagem apareça inteira sem distorcer */
             border-radius: 0.5rem;
             margin-bottom: 1.5rem;
         }
@@ -341,7 +346,8 @@
         .skills {
             background: var(--secondary-color);
             flex-direction: column;
-            justify-content: flex-start; /* Alinha o conteúdo ao topo */
+            justify-content: flex-start;
+            /* Alinha o conteúdo ao topo */
         }
 
         .skills-grid {
@@ -384,7 +390,8 @@
         .contact {
             flex-direction: column;
             text-align: center;
-            justify-content: flex-start; /* Alinha o conteúdo ao topo */
+            justify-content: flex-start;
+            /* Alinha o conteúdo ao topo */
         }
 
         .contact-content {
@@ -439,7 +446,7 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
             overflow: hidden;
             z-index: 110;
-            min-width: 170px; 
+            min-width: 170px;
         }
 
         .language-dropdown a {
@@ -531,15 +538,20 @@
             .language-selector {
                 margin: 1.5rem 0;
             }
+
             .language-button {
                 font-size: 1.2rem;
                 width: 100%;
                 justify-content: flex-start;
             }
+
             .language-dropdown {
-                right: auto; /* Remove o alinhamento à direita do desktop */
-                left: 0;     /* Alinha à esquerda do botão */
-                min-width: 100%; /* Ocupa a largura total do botão */
+                right: auto;
+                /* Remove o alinhamento à direita do desktop */
+                left: 0;
+                /* Alinha à esquerda do botão */
+                min-width: 100%;
+                /* Ocupa a largura total do botão */
             }
 
             .projects-grid {
@@ -575,9 +587,9 @@
 
         <nav class="navbar">
             <a href="#home">Home</a>
-            <a href="#about" data-pt="Sobre" data-en="About" data-it="Su">Sobre</a>
+            <a href="#about" data-pt="Sobre" data-en="About" data-it="Chi Sono">Sobre</a>
             <a href="#projects" data-pt="Projetos" data-en="Projects" data-it="Progetti">Projetos</a>
-            <a href="#skills"data-pt="Habilidades" data-en="Skills" data-it="Competenze">Habilidades</a>
+            <a href="#skills" data-pt="Habilidades" data-en="Skills" data-it="Competenze">Habilidades</a>
             <a href="#contact" data-pt="Contato" data-en="Contact" data-it="Contatti">Contato</a>
 
             <!-- Seletor de Idiomas -->
@@ -598,36 +610,43 @@
 
     <section id="home" class="home">
         <div class="home-content" data-aos="fade-up">
-            <h1 data-pt="Técnico em Automação Industrial" 
-                data-en="Industrial Automation Technician" 
-                data-it="Tecnico in Automazione Industriale">
-                Técnico em Automação Industrial
+            <h1 data-pt="Engenharia de Computação & Automação Industrial"
+                data-en="Computer Engineering & Industrial Automation"
+                data-it="Ingegneria Informatica & Automazione Industriale">
+                Engenharia de Computação & Automação Industrial
             </h1>
 
-            <h2 data-pt="Robótica, Visão Computacional e Modelagem CAD" 
-                data-en="Robotics, Computer Vision and CAD" 
-                data-it="Robotica, Visione Artificiale e CAD">
-                Robótica, Visão Computacional e Modelagem CAD
+            <h2 data-pt="Politecnico di Milano | Robótica, IoT & Prototipagem CAD"
+                data-en="Politecnico di Milano | Robotics, IoT & CAD Prototyping"
+                data-it="Politecnico di Milano | Robotica, IoT & Prototipazione CAD">
+                Politecnico di Milano | Robótica, IoT & Prototipagem CAD
             </h2>
 
-
-            <h3 data-pt="Construindo a percepção do futuro." 
-                data-en="Building the perception of the future." 
-                data-it="Costruendo la percezione del futuro.">
-                Construindo a percepção do futuro.
+            <h3 data-pt="Integrando hardware e software para solucionar problemas do mundo real."
+                data-en="Integrating hardware and software to solve real-world problems."
+                data-it="Integrando hardware e software per risolvere problemi del mondo reale.">
+                Integrando hardware e software para solucionar problemas do mundo real.
             </h3>
-            <a href="#projects" class="btn" data-pt="Veja meus projetos" data-en="See my projects" data-it="Guarda i miei progetti">Veja meus projetos</a>
+            <a href="#projects" class="btn" data-pt="Veja meus projetos" data-en="See my projects"
+                data-it="Guarda i miei progetti">Veja meus projetos</a>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/lucaslemosricaldoni/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/lemosslucas" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://app.readytensor.ai/users/lucaslemosricaldoni" target="_blank" aria-label="Ready Tensor"><i class="fa-solid fa-robot"></i></a>
-                <a href="https://grabcad.com/lucas.lemos.ricaldoni-1" target="_blank" aria-label="GrabCAD"><i class="fas fa-cube"></i> </a>
+                <a href="https://www.linkedin.com/in/lucaslemosricaldoni/" target="_blank" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/lemosslucas" target="_blank" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://app.readytensor.ai/users/lucaslemosricaldoni" target="_blank"
+                    aria-label="Ready Tensor"><i class="fa-solid fa-robot"></i></a>
+                <a href="https://grabcad.com/lucas.lemos.ricaldoni-1" target="_blank" aria-label="GrabCAD"><i
+                        class="fas fa-cube"></i></a>
             </div>
         </div>
         <div class="video-background">
             <video autoplay muted loop id="bg-video" playsinline>
                 <source src="img/car.mp4" type="video/mp4">
-                <span data-pt="Seu navegador não suporta vídeos em HTML5." data-en="Your browser does not support HTML5 video." data-it="Il tuo browser non supporta i video HTML5.">Seu navegador não suporta vídeos em HTML5.</span>
+                <span data-pt="Seu navegador não suporta vídeos em HTML5."
+                    data-en="Your browser does not support HTML5 video."
+                    data-it="Il tuo browser non supporta i video HTML5.">Seu navegador não suporta vídeos em
+                    HTML5.</span>
             </video>
         </div>
     </section>
@@ -638,61 +657,110 @@
                 <img src="img/foto_de_perfil.png" alt="Foto de Lucas Lemos Ricaldoni">
             </div>
             <div class="about-text">
-                <h2 data-pt="Sobre Mim" data-en="About Me" data-it="Su di me">Sobre Mim</h2>
-                <p data-pt="Fascinado pela capacidade das máquinas de perceber e interagir com o mundo. Meu objetivo é desenvolver sistemas robóticos inteligentes que solucionem problemas complexos do mundo real." data-en="Fascinated by the ability of machines to perceive and interact with the world. My goal is to develop intelligent robotic systems that solve complex real-world problems." data-it="Affascinato dalla capacità delle macchine di percepire e interagire con il mondo. Il mio obiettivo è sviluppare sistemi robotici intelligenti che risolvano complessi problemi del mondo reale.">
-                    Fascinado pela capacidade das máquinas de perceber e interagir com o mundo. Meu objetivo é desenvolver sistemas robóticos inteligentes que solucionem problemas complexos do mundo real.
+                <h2 data-pt="Sobre Mim" data-en="About Me" data-it="Chi Sono">Sobre Mim</h2>
+                <p data-pt="Estudante de <strong>Engenharia de Computação no Politecnico di Milano</strong> (Itália) e Técnico em <strong>Automação Industrial formado pelo COLTEC/UFMG</strong>. Possuo sólida experiência prática no desenvolvimento e integração de hardware e software, com foco em robótica, IoT, programação embarcada (C/C++, Python) e modelagem 3D (SolidWorks e Fusion 360)."
+                    data-en="<strong>Computer Engineering</strong> student at <strong>Politecnico di Milano</strong> (Italy) with a technical background in <strong>Industrial Automation from COLTEC/UFMG</strong>. Experienced in integrating hardware and software, focusing on robotics, IoT, embedded programming (C/C++, Python), and 3D CAD modeling (SolidWorks, Fusion 360)."
+                    data-it="Studente di <strong>Ingegneria Informatica al Politecnico di Milano</strong> (Italia) con formazione tecnica in <strong>Automazione Industriale (COLTEC/UFMG)</strong>. Esperienza pratica nell'integrazione di hardware e software, con focus su robotica, IoT, programmazione embedded (C/C++, Python) e modellazione 3D (SolidWorks, Fusion 360).">
+                    Estudante de <strong>Engenharia de Computação no Politecnico di Milano</strong> (Itália) e Técnico
+                    em <strong>Automação Industrial formado pelo COLTEC/UFMG</strong>. Possuo sólida experiência prática
+                    no desenvolvimento e integração de hardware e software, com foco em robótica, IoT, programação
+                    embarcada (C/C++, Python) e modelagem 3D (SolidWorks e Fusion 360).
                 </p>
-                <p data-pt="Com foco no desenvolvimento de algoritmos de visão computacional para navegação autônoma e manipulação de objetos, tenho experiência com OpenCV, modelagem de robos usando softwares como SolidWorks, Fusion 360 e desenvolvimento de circuitos eletronicos." data-en="With a focus on developing computer vision algorithms for autonomous navigation and object manipulation, I have experience with OpenCV, robot modeling using software like SolidWorks, Fusion 360, and electronic circuit development." data-it="Con un focus sullo sviluppo di algoritmi di visione artificiale per la navigazione autonoma e la manipolazione di oggetti, ho esperienza con OpenCV, modellazione di robot con software come SolidWorks, Fusion 360 e sviluppo di circuiti elettronici.">
-                    Com foco no desenvolvimento de algoritmos de visão computacional para navegação autônoma e manipulação de objetos, tenho experiência com OpenCV, modelagem de robos usando softwares como SolidWorks, Fusion 360 e desenvolvimento de circuitos eletronicos.
+                <p data-pt="Atualmente sou <strong>fundador e desenvolvedor na Vitrur</strong>, criando soluções completas de IoT, robótica e manufatura aditiva com filamentos técnicos de engenharia (como Tritan HT). Atuei como pesquisador júnior e estagiário de prototipagem no laboratório <strong>LIPS (UFMG)</strong>, desenvolvendo MVPs funcionais de IoT para saúde e atuando na automação e lógica de controle em CLP para máquina industrial em parceria com a <strong>Petrobras</strong>."
+                    data-en="Currently <strong>Founder & IoT/Prototyping Developer at Vitrur</strong>, engineering integrated IoT and robotics solutions alongside additive manufacturing with high-performance filaments (such as Tritan HT). Formerly Junior Researcher & Prototyping Intern at <strong>LIPS (UFMG)</strong>, developing functional healthcare IoT prototypes and industrial PLC automation logic in partnership with <strong>Petrobras</strong>."
+                    data-it="Attualmente <strong>Founder e sviluppatore presso Vitrur</strong>, realizzando soluzioni integrate di IoT, robotica e manifattura additiva con filamenti tecnici ad alte prestazioni (come Tritan HT). Già ricercatore junior e tirocinante di prototipazione presso il laboratorio <strong>LIPS (UFMG)</strong>, sviluppando prototipi IoT per la sanità e logica di controllo PLC per macchinari industriali in collaborazione con <strong>Petrobras</strong>.">
+                    Atualmente sou <strong>fundador e desenvolvedor na Vitrur</strong>, criando soluções completas de
+                    IoT, robótica e manufatura aditiva com filamentos técnicos de engenharia (como Tritan HT). Atuei
+                    como pesquisador júnior e estagiário de prototipagem no laboratório <strong>LIPS (UFMG)</strong>,
+                    desenvolvendo MVPs funcionais de IoT para saúde e atuando na automação e lógica de controle em CLP
+                    para máquina industrial em parceria com a <strong>Petrobras</strong>.
                 </p>
-                <a href="Lucas_Lemos_Ricaldoni_CV.pdf" class="btn" target="_blank" download data-pt="Download CV" data-en="Download CV" data-it="Scarica CV">Download CV</a>
+                <p data-pt="Reconhecido com o <strong>1º Lugar no Desafio de Saúde CI-IA (Unimed-BH)</strong> por solução de triagem hospitalar com IA, prêmio de <strong>Relevância Acadêmica na Semana do Conhecimento UFMG</strong> por dispositivo wearable IoT para idosos, e premiações em robótica autônoma na <strong>CoRA 2025</strong> (1º Lugar em Melhor Design Técnico e 3º Lugar em Seguidor de Linha Avançado como capitão da equipe Tartaruga Linhas)."
+                    data-en="Recognized with <strong>1st Place at the CI-IA Health Challenge (Unimed-BH)</strong> for AI-applied hospital triage engineering, <strong>Academic Relevance Award at UFMG Knowledge Week</strong> for an elderly care wearable IoT device, and multiple awards in autonomous robotics at <strong>CoRA 2025</strong> (1st Place Best Technical Design and 3rd Place Advanced Line Follower as team captain of Tartaruga Linhas)."
+                    data-it="Riconosciuto con il <strong>1° Posto al CI-IA Health Challenge (Unimed-BH)</strong> per il triage ospedaliero con IA, premio di <strong>Rilevanza Accademica alla Settimana della Conoscenza UFMG</strong> per un dispositivo wearable IoT per anziani, e premi in robotica autonoma a <strong>CoRA 2025</strong> (1° Posto Miglior Design Tecnico e 3° Posto Segui-linea Avanzato come capitano del team Tartaruga Linhas).">
+                    Reconhecido com o <strong>1º Lugar no Desafio de Saúde CI-IA (Unimed-BH)</strong> por solução de
+                    triagem hospitalar com IA, prêmio de <strong>Relevância Acadêmica na Semana do Conhecimento
+                        UFMG</strong> por dispositivo wearable IoT para idosos, e premiações em robótica autônoma na
+                    <strong>CoRA 2025</strong> (1º Lugar em Melhor Design Técnico e 3º Lugar em Seguidor de Linha
+                    Avançado como capitão da equipe Tartaruga Linhas).
+                </p>
+                <p data-pt="Possuo certificações por instituições como <strong>Harvard University</strong> (TinyML, CS50 Web, CS50 Python), <strong>IBM</strong> (Visão Computacional), <strong>OpenCV University</strong> e <strong>IFMG</strong> (Indústria 4.0 & IoT)."
+                    data-en="Certified by institutions including <strong>Harvard University</strong> (TinyML, CS50 Web, CS50 Python), <strong>IBM</strong> (Computer Vision), <strong>OpenCV University</strong>, and <strong>IFMG</strong> (Industry 4.0 & IoT)."
+                    data-it="Certificato da istituzioni quali <strong>Harvard University</strong> (TinyML, CS50 Web, CS50 Python), <strong>IBM</strong> (Computer Vision), <strong>OpenCV University</strong> e <strong>IFMG</strong> (Industria 4.0 & IoT).">
+                    Possuo certificações por instituições como <strong>Harvard University</strong> (TinyML, CS50 Web,
+                    CS50 Python), <strong>IBM</strong> (Visão Computacional), <strong>OpenCV University</strong> e
+                    <strong>IFMG</strong> (Indústria 4.0 & IoT).
+                </p>
+                <a href="Ricaldoni_Lucas_cv.pdf" class="btn" target="_blank" download data-pt="Download CV"
+                    data-en="Download CV" data-it="Scarica CV">Download CV</a>
             </div>
         </div>
     </section>
 
     <section id="projects" class="projects">
-        <h2 class="section-title" data-aos="fade-up" data-pt="Projetos" data-en="Projects" data-it="Progetti">Projetos</h2>
+        <h2 class="section-title" data-aos="fade-up" data-pt="Projetos em Destaque" data-en="Featured Projects"
+            data-it="Progetti in Evidenza">Projetos em Destaque</h2>
         <div class="projects-grid" data-aos="fade-up" data-aos-delay="200">
             <div class="project-card" onclick="openModal('modal1')">
                 <img src="img/Cora2025_blue.PNG" alt="CoRA2025">
                 <div class="card-overlay">
-                    <h3 data-pt="CoRA2025" data-en="CoRA2025" data-it="CoRA2025">CoRA2025</h3>
-                    <p data-pt="Competição de Robos Autonomos da UFMG" data-en="UFMG Autonomous Robots Competition" data-it="Competizione di Robot Autonomi dell'UFMG">Competição de Robos Autonomos da UFMG</p>
+                    <h3 data-pt="CoRA 2025 | Robótica Autônoma" data-en="CoRA 2025 | Autonomous Robotics"
+                        data-it="CoRA 2025 | Robotica Autonoma">CoRA 2025 | Robótica Autônoma</h3>
+                    <p data-pt="1º Lugar em Design Técnico & 3º Lugar Seguidor Avançado"
+                        data-en="1st Place Best Design & 3rd Place Advanced Line Follower"
+                        data-it="1° Posto Miglior Design & 3° Posto Segui-linea Avanzato">1º Lugar em Design Técnico &
+                        3º Lugar Seguidor Avançado</p>
                 </div>
             </div>
             <div class="project-card" onclick="openModal('modal2')">
-                <img src="img/bms_box.PNG" alt="Modelagem 3D">
+                <img src="img/bms_box.PNG" alt="Modelagem 3D & Engenharia CAD">
                 <div class="card-overlay">
-                    <h3 data-pt="Modelagem 3D" data-en="3D Modeling" data-it="Modellazione 3D">Modelagem 3D</h3>
-                    <p data-pt="Projetos desenvolvidos com SolidWorks/Fusion360" data-en="Projects developed with SolidWorks/Fusion360" data-it="Progetti sviluppati con SolidWorks/Fusion360">Projetos desenvolvidos com SolidWorks/Fusion360</p>
+                    <h3 data-pt="Modelagem CAD & Engenharia 3D" data-en="CAD Modeling & 3D Engineering"
+                        data-it="Modellazione CAD & Ingegneria 3D">Modelagem CAD & Engenharia 3D</h3>
+                    <p data-pt="Projetos em SolidWorks, Fusion 360 e Simulação Mecânica"
+                        data-en="Projects in SolidWorks, Fusion 360 & Mechanical Simulation"
+                        data-it="Progetti in SolidWorks, Fusion 360 & Simulazione Meccanica">Projetos em SolidWorks,
+                        Fusion 360 e Simulação Mecânica</p>
                 </div>
             </div>
             <div class="project-card" onclick="openModal('modal3')">
-                <img src="img/OBR2025_car.PNG" alt="OBR 2025">
+                <img src="img/OBR2025_car.PNG" alt="Robô com Visão Computacional">
                 <div class="card-overlay">
-                    <h3 data-pt="Braço Robótico com IA" data-en="Robotic Arm with AI" data-it="Braccio Robotico con IA">Braço Robótico com IA</h3>
-                    <p data-pt="Olimpiada Brasileira de Robotica." data-en="Brazilian Robotics Olympiad." data-it="Olimpiadi Brasiliane di Robotica.">Olimpiada Brasileira de Robotica.</p>
+                    <h3 data-pt="Robô Autônomo com Visão & IA" data-en="Autonomous Robot with Vision & AI"
+                        data-it="Robot Autonomo con Visione & IA">Robô Autônomo com Visão & IA</h3>
+                    <p data-pt="Olimpíada Brasileira de Robótica (OBR)" data-en="Brazilian Robotics Olympiad (OBR)"
+                        data-it="Olimpiadi Brasiliane di Robotica (OBR)">Olimpíada Brasileira de Robótica (OBR)</p>
                 </div>
             </div>
             <div class="project-card" onclick="openModal('modal4')">
-                <img src="img/iot.png" alt="Soluções IoT">
+                <img src="img/iot.png" alt="HidroBots & Smartwatch IoT">
                 <div class="card-overlay">
-                    <h3 data-pt="Soluções IoT" data-en="IoT Solutions" data-it="Soluzioni IoT">HidroBots</h3>
-                    <p data-pt="Conectividade e Monitoramento" data-en="Connectivity and Monitoring" data-it="Connettività e Monitoraggio">Sistema IOT voltado ao publico idoso</p>
+                    <h3 data-pt="HidroBots & Smartwatch IoT" data-en="HidroBots & IoT Smartwatch"
+                        data-it="HidroBots & Smartwatch IoT">HidroBots & Smartwatch IoT</h3>
+                    <p data-pt="Prêmio Relevância Acadêmica na UFMG" data-en="UFMG Academic Relevance Award"
+                        data-it="Premio Rilevanza Accademica UFMG">Prêmio Relevância Acadêmica na UFMG</p>
                 </div>
             </div>
             <div class="project-card" onclick="openModal('modal5')">
-                <img src="img/logo.png" alt="Mecatrônica">
+                <img src="img/logo.png" alt="Vitrur & Prototipagem Industrial">
                 <div class="card-overlay">
-                    <h3 data-pt="Mecatrônica" data-en="Mechatronics" data-it="Meccatronica">Impressao 3D</h3>
-                    <p data-pt="Sistemas Integrados" data-en="Integrated Systems" data-it="Sistemi Integrati">Loja de Impressao 3D</p>
+                    <h3 data-pt="Vitrur & Prototipagem Técnica" data-en="Vitrur & Technical Prototyping"
+                        data-it="Vitrur & Prototipazione Tecnica">Vitrur & Prototipagem Técnica</h3>
+                    <p data-pt="Soluções IoT, Manufatura 3D & Automação Industrial"
+                        data-en="IoT Solutions, 3D Manufacturing & Industrial Automation"
+                        data-it="Soluzioni IoT, Stampa 3D & Automazione Industriale">Soluções IoT, Manufatura 3D &
+                        Automação Industrial</p>
                 </div>
             </div>
             <div class="project-card" onclick="openModal('modal6')">
-                <img src="img/prototipagem.png" alt="CI-IA Saude UFMG Unimed BH">
+                <img src="img/prototipagem.png" alt="CI-IA Saúde Unimed-BH">
                 <div class="card-overlay">
-                    <h3 data-pt="CI-IA Saude UFMG Unimed BH" data-en="Prototyping & Innovation" data-it="Prototipazione e Innovazione">CI-IA Saude UFMG Unimed BH</h3>
-                    <p data-pt="Do Conceito à Realidade" data-en="From Concept to Reality" data-it="Dal Concetto alla Realtà">Desafio de Inovação na Triagem Hospitalar</p>
+                    <h3 data-pt="CI-IA Saúde (Unimed-BH)" data-en="CI-IA Health (Unimed-BH)"
+                        data-it="CI-IA Salute (Unimed-BH)">CI-IA Saúde (Unimed-BH)</h3>
+                    <p data-pt="1º Lugar - Triagem Hospitalar com Inteligência Artificial"
+                        data-en="1st Place - Hospital Triage with Artificial Intelligence"
+                        data-it="1° Posto - Triage Ospedaliero con Intelligenza Artificiale">1º Lugar - Triagem
+                        Hospitalar com Inteligência Artificial</p>
                 </div>
             </div>
         </div>
@@ -701,61 +769,121 @@
     <div id="modal1" class="modal">
         <div class="modal-content" data-aos="zoom-in">
             <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
-            <img src="img/Cora2025.jpg" alt="Projeto 3" class="modal-img">
-                <h2 data-pt="Competição de Robôs Autônomos da UFMG" data-en="UFMG Autonomous Robots Competition" data-it="Competizione di Robot Autonomi dell'UFMG">Competição de Robôs Autônomos da UFMG</h2>
+            <img src="img/Cora2025.jpg" alt="CoRA2025" class="modal-img">
+            <h2 data-pt="CoRA 2025 - Robô Autônomo (Tartaruga Linhas)"
+                data-en="CoRA 2025 - Autonomous Robot (Tartaruga Linhas)"
+                data-it="CoRA 2025 - Robot Autonomo (Tartaruga Linhas)">
+                CoRA 2025 - Robô Autônomo (Tartaruga Linhas)
+            </h2>
 
-                <div class="project-tags">
-                    <span>C/C++</span><span>Python</span><span>Fusion360</span><span>SolidWorks</span><span>Arduino</span>
-                </div>
-
-                <p data-pt="Robô seguidor de linha avançado, com projeto mecânico, eletrônico e firmware integrados. Fui capitão da equipe, liderei o desenvolvimento do software e garanti a integração de todos os subsistemas." data-en="Advanced line-following robot, with integrated mechanical, electronic, and firmware design. I was the team captain, led the software development, and ensured the integration of all subsystems." data-it="Robot segui-linea avanzato, con progettazione meccanica, elettronica e firmware integrati. Sono stato il capitano della squadra, ho guidato lo sviluppo del software e garantito l'integrazione di tutti i sottosistemi.">Robô seguidor de linha avançado, com projeto mecânico, eletrônico e firmware integrados. Fui capitão da equipe, liderei o desenvolvimento do software e garanti a integração de todos os subsistemas.</p>
-
-                <p data-pt="<strong>Resultado:</strong> 3º lugar (Seguidor de Linha Avançado) e 1º lugar (Design)." data-en="<strong>Result:</strong> 3rd place (Advanced Line Follower) and 1st place (Design)." data-it="<strong>Risultato:</strong> 3º posto (Segui-linea Avanzato) e 1º posto (Design)."><strong>Resultado:</strong> 3º lugar (Seguidor de Linha Avançado) e 1º lugar (Design).</p>
-
-                <p style="text-align:center; margin-top:1rem;">
-                    <a href="https://github.com/lemosslucas/CoRA2025" class="btn" target="_blank" rel="noopener noreferrer" data-pt="Ver no GitHub" data-en="View on GitHub" data-it="Vedi su GitHub">
-                    <i class="fab fa-github"></i> <span data-pt="Ver no GitHub" data-en="View on GitHub" data-it="Vedi su GitHub">Ver no GitHub</span>
-                    </a>
-                </p>
+            <div class="project-tags">
+                <span>C/C++</span><span>Arduino</span><span>Controle PID</span><span>SolidWorks</span><span>Fusion
+                    360</span><span>Robótica</span>
             </div>
+
+            <p data-pt="Como Capitão da equipe <strong>Tartaruga Linhas</strong> na Competição de Robôs Autônomos da UFMG (CoRA 2025), liderei o desenvolvimento completo de robôs autônomos utilizando Arduino e C/C++, integrando eletrônica, modelagem mecânica e algoritmos de controle PID para rastreamento de linha em alta velocidade com máxima estabilidade."
+                data-en="As Captain of the <strong>Tartaruga Linhas</strong> team at the UFMG Autonomous Robots Competition (CoRA 2025), I led the end-to-end development of autonomous robots using Arduino and C/C++, integrating electronics, mechanical modeling, and PID control algorithms for high-speed line tracking with maximum stability."
+                data-it="In qualità di Capitano del team <strong>Tartaruga Linhas</strong> alla Competizione di Robot Autonomi dell'UFMG (CoRA 2025), ho guidato lo sviluppo completo di robot autonomi con Arduino e C/C++, integrando elettronica, modellazione meccanica e algoritmi di controllo PID per il tracciamento rapido delle linee.">
+                Como Capitão da equipe <strong>Tartaruga Linhas</strong> na Competição de Robôs Autônomos da UFMG (CoRA
+                2025), liderei o desenvolvimento completo de robôs autônomos utilizando Arduino e C/C++, integrando
+                eletrônica, modelagem mecânica e algoritmos de controle PID para rastreamento de linha em alta
+                velocidade com máxima estabilidade.
+            </p>
+
+            <p data-pt="<strong>Premiações Conquistadas:</strong><br>• <strong>1º Lugar</strong> - Prêmio de Melhor Design Técnico (Best Design CoRA 2025)<br>• <strong>3º Lugar</strong> - Categoria Seguidor de Linha Avançado"
+                data-en="<strong>Awards Won:</strong><br>• <strong>1st Place</strong> - Best Technical Design Award (CoRA 2025)<br>• <strong>3rd Place</strong> - Advanced Line Follower Category"
+                data-it="<strong>Premi Vinti:</strong><br>• <strong>1° Posto</strong> - Premio Miglior Design Tecnico (CoRA 2025)<br>• <strong>3° Posto</strong> - Categoria Segui-linea Avanzato">
+                <strong>Premiações Conquistadas:</strong><br>• <strong>1º Lugar</strong> - Prêmio de Melhor Design
+                Técnico (Best Design CoRA 2025)<br>• <strong>3º Lugar</strong> - Categoria Seguidor de Linha Avançado
+            </p>
+
+            <p style="text-align:center; margin-top:1rem;">
+                <a href="https://github.com/lemosslucas/CoRA2025" class="btn" target="_blank" rel="noopener noreferrer"
+                    data-pt="Ver no GitHub" data-en="View on GitHub" data-it="Vedi su GitHub">
+                    <i class="fab fa-github"></i> <span data-pt="Ver no GitHub" data-en="View on GitHub"
+                        data-it="Vedi su GitHub">Ver no GitHub</span>
+                </a>
+            </p>
+        </div>
     </div>
+
     <div id="modal2" class="modal">
         <div class="modal-content" data-aos="zoom-in">
-        <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
-        <img src="img/bms_box.PNG" alt="Projeto 2" class="modal-img">
-        <h2 data-pt="Modelagem 3D" data-en="3D Modeling" data-it="Modellazione 3D">Modelagem 3D</h2>
+            <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
+            <img src="img/bms_box.PNG" alt="Modelagem CAD" class="modal-img">
+            <h2 data-pt="Modelagem CAD & Engenharia de Prototipagem" data-en="CAD Modeling & Prototyping Engineering"
+                data-it="Modellazione CAD & Ingegneria di Prototipazione">
+                Modelagem CAD & Engenharia de Prototipagem
+            </h2>
 
-        <div class="project-tags">
-            <span>SolidWorks</span><span>Fusion360</span><span>CAD</span>
+            <div class="project-tags">
+                <span>SolidWorks</span><span>Fusion
+                    360</span><span>CAD/CAM</span><span>Simulações</span><span></span><span>Impressão 3D</span>
+            </div>
+
+            <p data-pt="Modelagem CAD avançada para desenvolvimento de produtos, gabinetes estruturais eletrônicos, robôs e peças mecânicas funcionais. Amplo domínio de <strong>SolidWorks e Fusion 360</strong>, atuando desde o conceito e tolerâncias dimensionais até simulações estáticas/dinâmicas e preparação para manufatura aditiva e usinagem."
+                data-en="Advanced CAD modeling for product development, structural electronic enclosures, robotics, and functional mechanical parts. Extensive mastery of <strong>SolidWorks and Fusion 360</strong>, spanning from conceptual sketches and dimensional tolerances to static/dynamic simulations and additive manufacturing."
+                data-it="Modellazione CAD avanzata per lo sviluppo di prodotti, alloggiamenti strutturali per l'elettronica, robotica e componenti meccanici funzionali. Ampia padronanza di <strong>SolidWorks e Fusion 360</strong>, dalla progettazione concettuale alle simulazioni e produzione additiva.">
+                Modelagem CAD avançada para desenvolvimento de produtos, gabinetes estruturais eletrônicos, robôs e
+                peças mecânicas funcionais. Amplo domínio de <strong>SolidWorks e Fusion 360</strong>, atuando desde o
+                conceito e tolerâncias dimensionais até simulações estáticas/dinâmicas e preparação para manufatura
+                aditiva e usinagem.
+            </p>
+
+            <p data-pt="Experiência prática na fabricação de mais de 100 peças técnicas e funcionais, aplicando filamentos de engenharia como Tritan HT para alta durabilidade térmica e mecânica."
+                data-en="Hands-on experience manufacturing over 100 technical and functional parts, utilizing engineering-grade filaments such as Tritan HT for high thermal and mechanical durability."
+                data-it="Esperienza pratica nella produzione di oltre 100 parti tecniche e funzionali, utilizzando filamenti tecnici come Tritan HT per un'elevata resistenza termica e meccanica.">
+                Experiência prática na fabricação de mais de 100 peças técnicas e funcionais, aplicando filamentos de
+                engenharia como Tritan HT para alta durabilidade térmica e mecânica.
+            </p>
+
+            <p style="text-align:center; margin-top:1rem;">
+                <a href="https://grabcad.com/lucas.lemos.ricaldoni-1" class="btn" target="_blank"
+                    rel="noopener noreferrer" data-pt="Ver no GrabCAD" data-en="View on GrabCAD"
+                    data-it="Vedi su GrabCAD">
+                    <i class="fas fa-cube"></i> <span data-pt="Ver no GrabCAD" data-en="View on GrabCAD"
+                        data-it="Vedi su GrabCAD">Ver no GrabCAD</span>
+                </a>
+            </p>
         </div>
-
-        <p data-pt="Modelagem 3D para prototipagem mecânica, eletrônica e robótica usando SolidWorks e Fusion 360." data-en="3D modeling for mechanical, electronic, and robotic prototyping using SolidWorks and Fusion 360." data-it="Modellazione 3D per la prototipazione meccanica, elettronica e robotica utilizzando SolidWorks e Fusion 360.">Modelagem 3D para prototipagem mecânica, eletrônica e robótica usando SolidWorks e Fusion 360.</p>
-
-        <p style="text-align:center; margin-top:1rem;">
-            <a href="https://grabcad.com/lucas.lemos.ricaldoni-1" class="btn" target="_blank" rel="noopener noreferrer" data-pt="Ver no GrabCAD" data-en="View on GrabCAD" data-it="Vedi su GrabCAD">
-            <i class="fas fa-cube"></i> <span data-pt="Ver no GrabCAD" data-en="View on GrabCAD" data-it="Vedi su GrabCAD">Ver no GrabCAD</span>
-            </a>
-        </p>
     </div>
 
-    </div>
     <div id="modal3" class="modal">
         <div class="modal-content" data-aos="zoom-in">
             <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
-            <img src="img/OBR2025_car.PNG" alt="Projeto 1" class="modal-img">
-            <h2 data-pt="Braço Robótico com IA" data-en="Robotic Arm with AI" data-it="Braccio Robotico con IA">Braço Robótico com IA</h2>
+            <img src="img/OBR2025_car.PNG" alt="Robô com Visão Computacional" class="modal-img">
+            <h2 data-pt="Robô Autônomo com Visão Computacional & IA - OBR"
+                data-en="Autonomous Robot with Computer Vision & AI - OBR"
+                data-it="Robot Autonomo con Visione Artificiale & IA - OBR">
+                Robô Autônomo com Visão Computacional & IA - OBR
+            </h2>
 
             <div class="project-tags">
-                <span>Python</span><span>OpenCV</span><span>Raspberry Pi</span>
+                <span>Python</span><span>OpenCV</span><span>Raspberry Pi</span><span>Visão
+                    Computacional</span><span>Arduino</span>
             </div>
 
-            <p data-pt="<strong>Desafio:</strong> Desenvolver um seguidor de linha capaz de detectar linhas com diferentes cores e executar a identificação, localização e manipulação de objetos específicos em um ambiente." data-en="<strong>Challenge:</strong> To develop a line follower capable of detecting lines of different colors and performing the identification, location, and manipulation of specific objects in an environment." data-it="<strong>Sfida:</strong> Sviluppare un robot segui-linea in grado di rilevare linee di colori diversi ed eseguire l'identificazione, la localizzazione e la manipolazione di oggetti specifici in un ambiente."><strong>Desafio:</strong> Desenvolver um seguidor de linha capaz de detectar linhas com diferentes cores e executar a identificação, localização e manipulação de objetos específicos em um ambiente.</p>
+            <p data-pt="<strong>Desafio:</strong> Desenvolver um robô autônomo para a Olimpíada Brasileira de Robótica, capaz de identificar trajetos com diferentes marcações de cores, transpor obstáculos, rampas e executar a detecção, localização e resgate/manipulação de objetos em uma arena de desastres simulada."
+                data-en="<strong>Challenge:</strong> Develop an autonomous robot for the Brazilian Robotics Olympiad capable of navigating paths with distinct color markers, surmounting obstacles and ramps, and performing object identification, localization, and rescue in a simulated disaster arena."
+                data-it="<strong>Sfida:</strong> Sviluppare un robot autonomo per le Olimpiadi Brasiliane di Robotica in grado di navigare su percorsi con vari indicatori di colore, superare ostacoli e rampe, e identificare, localizzare e recuperare oggetti in un'arena simulata.">
+                <strong>Desafio:</strong> Desenvolver um robô autônomo para a Olimpíada Brasileira de Robótica, capaz de
+                identificar trajetos com diferentes marcações de cores, transpor obstáculos, rampas e executar a
+                detecção, localização e resgate/manipulação de objetos em uma arena de desastres simulada.
+            </p>
 
-            <p data-pt="<strong>Solução:</strong> Sistema integrado com Raspberry Pi e Python, utilizando OpenCV para visão computacional, lógica de controle para seguir linhas e algoritmos para detecção de objetos." data-en="<strong>Solution:</strong> An integrated system with Raspberry Pi and Python, using OpenCV for computer vision, control logic for line following, and algorithms for object detection." data-it="<strong>Soluzione:</strong> Un sistema integrato con Raspberry Pi e Python, che utilizza OpenCV per la visione artificiale, logica di controllo per seguire le linee e algoritmi per il rilevamento di oggetti."><strong>Solução:</strong> Sistema integrado com Raspberry Pi e Python, utilizando OpenCV para visão computacional, lógica de controle para seguir linhas e algoritmos para detecção de objetos.</p>
+            <p data-pt="<strong>Solução Técnica:</strong> Arquitetura integrada combinando Raspberry Pi e Python, utilizando a biblioteca OpenCV para processamento de imagem em tempo real, reconhecimento de padrões e cores, interligado a microcontrolador para controle de motores e sensores."
+                data-en="<strong>Technical Solution:</strong> Integrated architecture combining Raspberry Pi and Python with OpenCV for real-time computer vision, pattern and color detection, interfaced with microcontrollers for precision motor control and sensor processing."
+                data-it="<strong>Soluzione Tecnica:</strong> Architettura integrata con Raspberry Pi e Python tramite OpenCV per computer vision in tempo reale, riconoscimento di forme e colori, interfacciata con microcontrollori per il controllo dei motori.">
+                <strong>Solução Técnica:</strong> Arquitetura integrada combinando Raspberry Pi e Python, utilizando a
+                biblioteca OpenCV para processamento de imagem em tempo real, reconhecimento de padrões e cores,
+                interligado a microcontrolador para controle de motores e sensores.
+            </p>
 
             <p style="text-align:center; margin-top:1rem;">
-                <a href="https://github.com/lemosslucas/OBR2025" class="btn" target="_blank" rel="noopener noreferrer" data-pt="Ver no GitHub" data-en="View on GitHub" data-it="Vedi su GitHub">
-                    <i class="fab fa-github"></i> <span data-pt="Ver no GitHub" data-en="View on GitHub" data-it="Vedi su GitHub">Ver no GitHub</span>
+                <a href="https://github.com/lemosslucas/OBR2025" class="btn" target="_blank" rel="noopener noreferrer"
+                    data-pt="Ver no GitHub" data-en="View on GitHub" data-it="Vedi su GitHub">
+                    <i class="fab fa-github"></i> <span data-pt="Ver no GitHub" data-en="View on GitHub"
+                        data-it="Vedi su GitHub">Ver no GitHub</span>
                 </a>
             </p>
         </div>
@@ -765,88 +893,176 @@
         <div class="modal-content" data-aos="zoom-in">
             <span class="close-btn" onclick="closeModal('modal4')">&times;</span>
             <img src="img/iot.png" alt="HidroBots" class="modal-img">
-            <h2 data-pt="HidroBots" data-en="HidroBots" data-it="HidroBots">HidroBots</h2>
+            <h2 data-pt="HidroBots: Smartwatch & Solução IoT para Idosos"
+                data-en="HidroBots: Smartwatch & IoT Solution for Elderly Care"
+                data-it="HidroBots: Smartwatch & Soluzione IoT per Anziani">
+                HidroBots: Smartwatch & Solução IoT para Idosos
+            </h2>
 
             <div class="project-tags">
-                <span>ESP32</span><span>MQTT</span><span>Wearable</span><span>IoT</span>
+                <span>ESP32</span><span>IoT</span><span>MQTT</span><span>Wearables</span><span>LIPS -
+                    UFMG</span><span>Relevância Acadêmica</span>
             </div>
 
-            <p data-pt="Solução IoT integrada que conecta um sensor de umidade (Gnomo) a um smartwatch exclusivo. O sistema notifica proativamente o idoso quando a planta precisa de água, promovendo autonomia. Desenvolvimento 100% autoral e projeto destaque na Semana do Conhecimento da UFMG." data-en="Integrated IoT solution connecting a playful humidity sensor (Gnome) to a custom smartwatch. The system proactively notifies the elderly when the plant needs water, promoting autonomy. 100% original development and highlight project at UFMG Knowledge Week." data-it="Soluzione IoT integrata che collega un sensore di umidità ludico (Gnomo) a uno smartwatch esclusivo. Il sistema notifica proattivamente l'anziano quando la pianta ha bisogno di acqua, promuovendo l'autonomia. Sviluppo 100% originale e progetto di spicco alla Settimana della Conoscenza dell'UFMG.">Solução IoT integrada que conecta um sensor de umidade lúdico (Gnomo) a um smartwatch exclusivo. O sistema notifica proativamente o idoso quando a planta precisa de água, promovendo autonomia. Desenvolvimento 100% autoral e projeto destaque na Semana do Conhecimento da UFMG.</p>
+            <p data-pt="Projeto de Iniciação Científica desenvolvido no Laboratório de Inovação, Prototipagem e Simulação (<strong>LIPS - UFMG</strong>). Trata-se de uma solução IoT completa que integra um protótipo de <strong>smartwatch vibratório</strong> customizado a um sensor lúdico de umidade e dados ambientais (Gnomo). O sistema emite alertas automatizados para incentivar a autonomia, bem-estar e hidratação do idoso."
+                data-en="Scientific Initiation project developed at the Innovation, Prototyping and Simulation Laboratory (<strong>LIPS - UFMG</strong>). A comprehensive IoT healthcare solution connecting a custom <strong>vibrating smartwatch</strong> prototype to soil moisture and environmental sensors, sending proactive alerts to foster elderly autonomy and health."
+                data-it="Progetto di Iniziazione Scientifica sviluppato presso il Laboratorio di Innovazione, Prototipazione e Simulazione (<strong>LIPS - UFMG</strong>). Soluzione IoT completa che integra uno <strong>smartwatch vibrante</strong> personalizzato con sensori di umidità e parametri ambientali per la cura e il benessere dell'anziano.">
+                Projeto de Iniciação Científica desenvolvido no Laboratório de Inovação, Prototipagem e Simulação
+                (<strong>LIPS - UFMG</strong>). Trata-se de uma solução IoT completa que integra um protótipo de
+                <strong>smartwatch vibratório</strong> customizado a um sensor lúdico de umidade e dados ambientais
+                (Gnomo). O sistema emite alertas automatizados para incentivar a autonomia, bem-estar e hidratação do
+                idoso.
+            </p>
+
+            <p data-pt="<strong>Reconhecimento:</strong> Premiado com o certificado de <strong>Relevância Acadêmica</strong> no XV Seminário de Iniciação Científica durante a Semana do Conhecimento da UFMG 2025."
+                data-en="<strong>Recognition:</strong> Awarded the <strong>Academic Relevance Award</strong> at the XV Scientific Initiation Seminar during UFMG Knowledge Week 2025."
+                data-it="<strong>Riconoscimento:</strong> Premiato con il certificato di <strong>Rilevanza Accademica</strong> al XV Seminario di Iniziazione Scientifica durante la Settimana della Conoscenza UFMG 2025.">
+                <strong>Reconhecimento:</strong> Premiado com o certificado de <strong>Relevância Acadêmica</strong> no
+                XV Seminário de Iniciação Científica durante a Semana do Conhecimento da UFMG 2025.
+            </p>
         </div>
     </div>
 
     <div id="modal5" class="modal">
         <div class="modal-content" data-aos="zoom-in">
             <span class="close-btn" onclick="closeModal('modal5')">&times;</span>
-            <img src="img/mecatronica.jpg" alt="Mecatrônica" class="modal-img">
-            <h2 data-pt="Mecatrônica" data-en="Mechatronics" data-it="Meccatronica">Mecatrônica</h2>
+            <img src="img/mecatronica.jpg" alt="Vitrur & Prototipagem" class="modal-img">
+            <h2 data-pt="Vitrur & Engenharia de Prototipagem / Automação"
+                data-en="Vitrur & Prototyping / Automation Engineering"
+                data-it="Vitrur & Ingegneria di Prototipazione / Automazione">
+                Vitrur & Engenharia de Prototipagem / Automação
+            </h2>
 
             <div class="project-tags">
-                <span>Eletrônica</span><span>Mecânica</span><span>Controle</span><span>Atuadores</span>
+                <span>Vitrur</span><span>Impressão 3D Técnica</span><span>Automação Industrial</span><span>CLP /
+                    PLC</span><span>Petrobras</span>
             </div>
 
-            <p data-pt="Projetos que unem mecânica, eletrônica e computação para criar máquinas inteligentes. Foco em automação industrial, controle de movimento e integração de hardware e software para otimização de processos." data-en="Projects that combine mechanics, electronics, and computing to create intelligent machines. Focus on industrial automation, motion control, and hardware-software integration for process optimization." data-it="Progetti che uniscono meccanica, elettronica e informatica per creare macchine intelligenti. Focus sull'automazione industriale, controllo del movimento e integrazione hardware-software per l'ottimizzazione dei processi.">Projetos que unem mecânica, eletrônica e computação para criar máquinas inteligentes. Foco em automação industrial, controle de movimento e integração de hardware e software para otimização de processos.</p>
+            <p data-pt="Como fundador e desenvolvedor na <strong>Vitrur</strong>, atuo no ciclo completo de desenvolvimento de soluções em Internet das Coisas (IoT) e Robótica, unindo modelagem 3D, hardware embarcado e manufatura aditiva com filamentos técnicos de alta performance (como <strong>Tritan HT</strong>), garantindo conformidade mecânica e térmica para ambientes severos, com mais de 100 peças técnicas entregues."
+                data-en="As Founder & Developer at <strong>Vitrur</strong>, I lead end-to-end development of Internet of Things (IoT) and Robotics solutions, combining CAD modeling, embedded hardware, and additive manufacturing using high-performance engineering filaments (such as <strong>Tritan HT</strong>) to ensure mechanical and thermal compliance, delivering over 100 technical parts."
+                data-it="Come Fondatore e Sviluppatore di <strong>Vitrur</strong>, realizzo lo sviluppo end-to-end di soluzioni IoT e Robotica, unendo modellazione CAD, hardware embedded e manifattura additiva con filamenti tecnici ad alte prestazioni (come <strong>Tritan HT</strong>), con oltre 100 parti tecniche consegnate.">
+                Como fundador e desenvolvedor na <strong>Vitrur</strong>, atuo no ciclo completo de desenvolvimento de
+                soluções em Internet das Coisas (IoT) e Robótica, unindo modelagem 3D, hardware embarcado e manufatura
+                aditiva com filamentos técnicos de alta performance (como <strong>Tritan HT</strong>), garantindo
+                conformidade mecânica e térmica para ambientes severos, com mais de 100 peças técnicas entregues.
+            </p>
+
+            <p data-pt="Adicionalmente, durante meu estágio no <strong>LIPS - UFMG</strong>, participei do desenvolvimento de uma máquina industrial automatizada em parceria com a <strong>Petrobras</strong>, atuando na infraestrutura do painel elétrico, distribuição de potência e lógica de controle em CLP/IHM (Autostation Pro e IHM Tools)."
+                data-en="Additionally, during my internship at <strong>LIPS - UFMG</strong>, I contributed to an automated industrial machine developed in partnership with <strong>Petrobras</strong>, designing the electrical panel, power distribution infrastructure, and PLC/HMI control logic (using Autostation Pro and HMI Tools)."
+                data-it="Inoltre, durante il tirocinio presso il <strong>LIPS - UFMG</strong>, ho partecipato allo sviluppo di una macchina industriale automatizzata in collaborazione con <strong>Petrobras</strong>, progettando il quadro elettrico, la distribuzione di potenza e la logica di controllo PLC/HMI (Autostation Pro).">
+                Adicionalmente, durante meu estágio no <strong>LIPS - UFMG</strong>, participei do desenvolvimento de
+                uma máquina industrial automatizada em parceria com a <strong>Petrobras</strong>, atuando na
+                infraestrutura do painel elétrico, distribuição de potência e lógica de controle em CLP/IHM (Autostation
+                Pro e IHM Tools).
+            </p>
         </div>
     </div>
 
     <div id="modal6" class="modal">
         <div class="modal-content" data-aos="zoom-in">
             <span class="close-btn" onclick="closeModal('modal6')">&times;</span>
-            <img src="img/prototipagem.png" alt="CI-IA Saude UFMG Unimed BH" class="modal-img">
-            <h2 data-pt="CI-IA Saude UFMG Unimed BH" data-en="CI-IA Saude UFMG Unimed BH" data-it="CI-IA Saude UFMG Unimed BH">CI-IA Saude UFMG Unimed BH</h2>
+            <img src="img/prototipagem.png" alt="CI-IA Saúde Unimed-BH" class="modal-img">
+            <h2 data-pt="1º Lugar - Desafio CI-IA de Inovação em Saúde (Unimed-BH)"
+                data-en="1st Place - CI-IA Health Innovation Challenge (Unimed-BH)"
+                data-it="1° Posto - Sfida di Innovazione Sanitaria CI-IA (Unimed-BH)">
+                1º Lugar - Desafio CI-IA de Inovação em Saúde (Unimed-BH)
+            </h2>
 
             <div class="project-tags">
-                <span>Impressão 3D</span><span>Design Thinking</span><span>MVP</span><span>Inovação</span>
+                <span>1º Lugar</span><span>Prêmio Geraldo Ribeiro</span><span>Inteligência
+                    Artificial</span><span>Modelagem 3D</span><span>Simulação</span><span>Saúde</span>
             </div>
 
-            <p data-pt="1º Lugar no desafio, desenvolvendo uma solução integrada com IA para otimizar a triagem hospitalar." data-en="1st Place in the challenge, developing an integrated AI solution to optimize hospital triage." data-it="1º Posto nella sfida, sviluppando una soluzione integrata con IA per ottimizzare il triage ospedaliero.">1º Lugar no desafio, desenvolvendo uma solução integrada com IA para otimizar a triagem hospitalar.</p>
+            <p data-pt="<strong>1º Lugar - Prêmio Geraldo Ribeiro</strong> no Desafio de Saúde promovido pelo Centro de Inteligência Artificial em Saúde (CI-IA) e pela Unimed-BH.<br><br>Responsável pela engenharia mecânica, modelagem CAD 3D e simulações para a solução tecnológica inovadora aplicada à <strong>triagem hospitalar baseada em Inteligência Artificial</strong>, integrando a estrutura do protótipo, ergonomia e validação de MVP funcional apresentado à banca médica e tecnológica."
+                data-en="<strong>1st Place - Geraldo Ribeiro Award</strong> at the Health Challenge hosted by the Center for Artificial Intelligence in Health (CI-IA) and Unimed-BH.<br><br>Led mechanical engineering, 3D CAD modeling, and simulations for an innovative technological solution applied to <strong>AI-driven hospital triage</strong>, integrating physical architecture, ergonomics, and validation of the functional MVP demonstrated to the medical and technology board."
+                data-it="<strong>1° Posto - Premio Geraldo Ribeiro</strong> al CI-IA Health Challenge promosso dal Centro per l'Intelligenza Artificiale nella Salute (CI-IA) e Unimed-BH.<br><br>Responsabile dell'ingegnerizzazione meccanica, modellazione 3D e simulazioni per una soluzione tecnologica innovativa di <strong>triage ospedaliero basato su Intelligenza Artificiale</strong>, convalidando l'MVP funzionale presentato alla commissione medico-tecnologica.">
+                <strong>1º Lugar - Prêmio Geraldo Ribeiro</strong> no Desafio de Saúde promovido pelo Centro de
+                Inteligência Artificial em Saúde (CI-IA) e pela Unimed-BH.<br><br>Responsável pela engenharia mecânica,
+                modelagem CAD 3D e simulações para a solução tecnológica inovadora aplicada à <strong>triagem hospitalar
+                    baseada em Inteligência Artificial</strong>, integrando a estrutura do protótipo, ergonomia e
+                validação de MVP funcional apresentado à banca médica e tecnológica.
+            </p>
 
             <p style="text-align:center; margin-top:1rem;">
-                <a href="https://youtu.be/Z2lGSrR--lI" class="btn" target="_blank" rel="noopener noreferrer" data-pt="Ver Vídeo" data-en="Watch Video" data-it="Guarda Video">
-                    <i class="fab fa-youtube"></i> <span data-pt="Ver Vídeo" data-en="Watch Video" data-it="Guarda Video">Ver Vídeo</span>
+                <a href="https://youtu.be/Z2lGSrR--lI" class="btn" target="_blank" rel="noopener noreferrer"
+                    data-pt="Ver Vídeo" data-en="Watch Video" data-it="Guarda Video">
+                    <i class="fab fa-youtube"></i> <span data-pt="Ver Vídeo" data-en="Watch Video"
+                        data-it="Guarda Video">Ver Vídeo</span>
                 </a>
             </p>
         </div>
     </div>
 
     <section id="skills" class="skills">
-        <h2 class="section-title" data-aos="fade-up" data-pt="Habilidades Técnicas" data-en="Technical Skills" data-it="Competenze Tecniche">Habilidades Técnicas</h2>
-            <div class="skills-grid" data-aos="fade-up" data-aos-delay="200">
-                <div class="skill-item" data-pt="Python" data-en="Python" data-it="Python"><i class="fab fa-python"></i> Python</div>
-                <div class="skill-item" data-pt="C/C++" data-en="C/C++" data-it="C/C++"><i class="fas fa-file-code"></i> C/C++</div>
-                
-                <div class="skill-item" data-pt="SolidWorks" data-en="SolidWorks" data-it="SolidWorks"><i class="fas fa-drafting-compass"></i> SolidWorks</div>
-                <div class="skill-item" data-pt="Fusion 360" data-en="Fusion 360" data-it="Fusion 360"><i class="fas fa-ruler-combined"></i> Fusion 360</div>
-
-                <div class="skill-item" data-pt="MATLAB" data-en="MATLAB" data-it="MATLAB"><i class="fas fa-chart-line"></i> MATLAB</div>
-                <div class="skill-item" data-pt="OpenCV" data-en="OpenCV" data-it="OpenCV"><i class="fas fa-eye"></i> OpenCV</div>
-                
-                <div class="skill-item" data-pt="PLC" data-en="PLC" data-it="PLC"><i class="fas fa-microchip"></i> PLC</div>
-
-                <div class="skill-item" data-pt="ROS" data-en="ROS" data-it="ROS"><i class="fas fa-robot"></i> ROS</div>
-                <div class="skill-item" data-pt="Gazebo" data-en="Gazebo" data-it="Gazebo"><i class="fas fa-cubes"></i> Gazebo</div>
-                
-                <div class="skill-item" data-pt="TensorFlow" data-en="TensorFlow" data-it="TensorFlow"><i class="fas fa-brain"></i> TensorFlow</div>
-                <div class="skill-item" data-pt="PyTorch" data-en="PyTorch" data-it="PyTorch"><i class="fas fa-fire"></i> PyTorch</div>
-
-                <div class="skill-item" data-pt="Git" data-en="Git" data-it="Git"><i class="fas fa-code-branch"></i> Git</div>
+        <h2 class="section-title" data-aos="fade-up" data-pt="Habilidades Técnicas" data-en="Technical Skills"
+            data-it="Competenze Tecniche">Habilidades Técnicas</h2>
+        <div class="skills-grid" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-item"><i class="fab fa-python"></i> <span data-pt="Python" data-en="Python"
+                    data-it="Python">Python</span></div>
+            <div class="skill-item"><i class="fas fa-file-code"></i> <span data-pt="C / C++" data-en="C / C++"
+                    data-it="C / C++">C / C++</span></div>
+            <div class="skill-item"><i class="fas fa-cube"></i> <span data-pt="Fusion 360" data-en="Fusion 360"
+                    data-it="Fusion 360">Fusion 360</span></div>
+            <div class="skill-item"><i class="fas fa-drafting-compass"></i> <span data-pt="SolidWorks"
+                    data-en="SolidWorks" data-it="SolidWorks">SolidWorks</span></div>
+            <div class="skill-item"><i class="fas fa-microchip"></i> <span data-pt="Arduino & ESP32"
+                    data-en="Arduino & ESP32" data-it="Arduino & ESP32">Arduino & ESP32</span></div>
+            <div class="skill-item"><i class="fas fa-brain"></i> <span data-pt="TinyML & TensorFlow"
+                    data-en="TinyML & TensorFlow" data-it="TinyML & TensorFlow">TinyML & TensorFlow</span></div>
+            <div class="skill-item"><i class="fas fa-eye"></i> <span data-pt="OpenCV & Visão Comp."
+                    data-en="OpenCV & Comp. Vision" data-it="OpenCV & Visione Art.">OpenCV & Visão Comp.</span></div>
+            <div class="skill-item"><i class="fas fa-chart-line"></i> <span data-pt="MATLAB & Simulink"
+                    data-en="MATLAB & Simulink" data-it="MATLAB & Simulink">MATLAB & Simulink</span></div>
+            <div class="skill-item"><i class="fas fa-cogs"></i> <span data-pt="CLP / PLC & SCADA" data-en="PLC & SCADA"
+                    data-it="PLC & SCADA">CLP / PLC & SCADA</span></div>
+            <div class="skill-item"><i class="fas fa-wifi"></i> <span data-pt="IoT & Sistemas Embarcados"
+                    data-en="IoT & Embedded Systems" data-it="IoT & Sistemi Embedded">IoT & Sistemas Embarcados</span>
             </div>
+            <div class="skill-item"><i class="fas fa-print"></i> <span data-pt="Impressão 3D" data-en="3D Printing"
+                    data-it="Stampa 3D">Impressão 3D</span></div>
+            <div class="skill-item"><i class="fab fa-git-alt"></i> <span data-pt="Git & GitHub" data-en="Git & GitHub"
+                    data-it="Git & GitHub">Git & GitHub</span></div>
+            <div class="skill-item"><i class="fab fa-js"></i> <span data-pt="JavaScript" data-en="JavaScript"
+                    data-it="JavaScript">JavaScript</span></div>
+        </div>
     </section>
 
     <section id="contact" class="contact">
         <div class="contact-content" data-aos="fade-up">
             <h2 data-pt="Vamos Conversar?" data-en="Let's Talk?" data-it="Parliamone?">Vamos Conversar?</h2>
-            <p data-pt="Estou sempre aberto a novas oportunidades, desafios e colaborações. Sinta-se à vontade para entrar em contato através do meu e-mail ou LinkedIn." data-en="I am always open to new opportunities, challenges, and collaborations. Feel free to contact me via email or LinkedIn." data-it="Sono sempre aperto a nuove opportunità, sfide e collaborazioni. Non esitate a contattarmi tramite la mia email o LinkedIn.">Estou sempre aberto a novas oportunidades, desafios e colaborações. Sinta-se à vontade para entrar em contato através do meu e-mail ou LinkedIn.</p>
-            <a href="mailto:lucaslemosricaldoni@gmail.com" class="btn" data-pt="Enviar E-mail" data-en="Send Email" data-it="Invia Email">Enviar E-mail</a>
+            <p data-pt="Estou sempre aberto a novas oportunidades, desafios e colaborações em engenharia, IoT, robótica, visão computacional e inteligência artificial. Sinta-se à vontade para entrar em contato através do meu e-mail ou LinkedIn."
+                data-en="I am always open to new opportunities, challenges, and collaborations in engineering, IoT, robotics, computer vision, and artificial intelligence. Feel free to reach out via email or LinkedIn."
+                data-it="Sono sempre aperto a nuove opportunità, sfide e collaborazioni in ingegneria, IoT, robotica, computer vision e intelligenza artificiale. Non esitate a contattarmi via email o LinkedIn.">
+                Estou sempre aberto a novas oportunidades, desafios e colaborações em engenharia, IoT, robótica, visão
+                computacional e inteligência artificial. Sinta-se à vontade para entrar em contato através do meu e-mail
+                ou LinkedIn.
+            </p>
+            <p style="margin-bottom: 2rem; color: #a0aec0; font-size: 1.05rem;">
+                <i class="fas fa-map-marker-alt" style="color: var(--primary-color);"></i> <span
+                    data-pt="Cremona, Itália" data-en="Cremona, Italy" data-it="Cremona, Italia">Cremona, Itália</span>
+                &nbsp;|&nbsp;
+                <i class="fas fa-envelope" style="color: var(--primary-color);"></i> lucaslemosricaldoni@gmail.com
+            </p>
+            <a href="mailto:lucaslemosricaldoni@gmail.com" class="btn" data-pt="Enviar E-mail" data-en="Send Email"
+                data-it="Invia Email">Enviar E-mail</a>
             <div class="social-links">
-                <a href="https://linkedin.com/in/lucaslemosricaldoni" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/lemosslucas" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/lucaslemosricaldoni/" target="_blank" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/lemosslucas" target="_blank" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://app.readytensor.ai/users/lucaslemosricaldoni" target="_blank"
+                    aria-label="Ready Tensor"><i class="fa-solid fa-robot"></i></a>
+                <a href="https://grabcad.com/lucas.lemos.ricaldoni-1" target="_blank" aria-label="GrabCAD"><i
+                        class="fas fa-cube"></i></a>
             </div>
         </div>
     </section>
 
     <footer class="footer">
-        <p data-pt="&copy; 2025 Lucas Lemos Ricaldoni. Todos os direitos reservados." data-en="&copy; 2025 Lucas Lemos Ricaldoni. All rights reserved." data-it="&copy; 2025 Lucas Lemos Ricaldoni. Tutti i diritti riservati.">&copy; 2025 Lucas Lemos Ricaldoni. Todos os direitos reservados.</p>
+        <p data-pt="&copy; 2026 Lucas Lemos Ricaldoni. Todos os direitos reservados."
+            data-en="&copy; 2026 Lucas Lemos Ricaldoni. All rights reserved."
+            data-it="&copy; 2026 Lucas Lemos Ricaldoni. Tutti i diritti riservati.">&copy; 2026 Lucas Lemos Ricaldoni.
+            Todos os direitos reservados.</p>
     </footer>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
