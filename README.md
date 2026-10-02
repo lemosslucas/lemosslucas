@@ -10,7 +10,7 @@
 
 ###
 
-<p align="left">🎓 Computer Engineering @ Politecnico di Milano | Automation Technician @ COLTEC/UFMG.<br>🚀 Founder & IoT/Prototyping Developer @ Vitrur.<br>🏆 1st Place CI-IA Health Challenge (Unimed-BH) | UFMG Academic Relevance Award | 1st Place Best Design CoRA 2025 | 3st Place Advanced Line Follower CoRA 2025.<br>🌍 Portuguese (Native), Italian (B2), English (B1/B2).<br>🤖 Passionate about robotics, IoT, TinyML, computer vision, and rapid prototyping.</p>
+<p align="left">🎓 Computer Engineering @ Politecnico di Milano | Automation Technician @ COLTEC/UFMG.<br>🚀 Founder & IoT/Prototyping Developer @ Vitrur.<br>🏆 1st Place CI-IA Health Challenge (Unimed-BH) | UFMG Academic Relevance Award | 1st Place Best Design CoRA 2025 | 3st Place Advanced Line Follower CoRA 2025.<br>🌍 Portuguese (Native), Italian (B2), English (B1).<br>🤖 Passionate about robotics, IoT, TinyML, computer vision, and rapid prototyping.</p>
 
 ###
 
